@@ -2,6 +2,6 @@
 
 import FamilyApp from "@/app/components/FamilyApp";
 
-export default function Page() {
+export default function Home() {
   return <FamilyApp />;
 }
