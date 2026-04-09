@@ -1,0 +1,7 @@
+MORGEN STARTEN MIT:
+1. profiles Tabelle → avatar Spalte hinzufügen
+2. kind-erstellen Seite → Avatar-Auswahl einbauen
+3. Chat-Seite bauen
+4. Anthropic API anschliessen
+5. Auf Vercel deployen
+

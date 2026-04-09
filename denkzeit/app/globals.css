@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Chat: Nachricht / Button blinkt während Text-to-Speech */
+@keyframes blinken {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.blinkt {
+  animation: blinken 0.6s ease-in-out infinite;
+}
+
+/* Chat: Wiedergabe-Button neben Assistenten-Nachricht — Hover sichtbar */
+.chat-assistant-row .vorles-btn-nachricht {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.chat-assistant-row:hover .vorles-btn-nachricht {
+  opacity: 1;
+}
+
+.chat-assistant-row.chat-assistant-ton-aus .vorles-btn-nachricht {
+  opacity: 0.45;
+}
+
+.chat-assistant-row.chat-assistant-ton-aus:hover .vorles-btn-nachricht {
+  opacity: 0.6;
+}
+
+.chat-assistant-row .vorles-btn-nachricht.vorles-btn-aktiv {
+  opacity: 1;
+}
